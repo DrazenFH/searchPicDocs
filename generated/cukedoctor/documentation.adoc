@@ -45,10 +45,10 @@
 |0
 |0
 |10
-|19s 371ms
+|18s 143ms
 |[green]#*passed*#
 12+^|*Totals*
-|3|0|3|10|0|0|0|0|0|10 2+|19s 371ms
+|3|0|3|10|0|0|0|0|0|10 2+|18s 143ms
 |===
 
 == *Features*
@@ -63,35 +63,35 @@ endif::[]
 
 ==========
 Given ::
-Open https://searchpic.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 938ms)#
+Open https://searchpic.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 444ms)#
 ==========
 
 ==== Scenario: Test login
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(769ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 517ms)#
 ==========
 
 ==== Scenario: Test no search request
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(743ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(754ms)#
 When ::
-Search the picture '' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 712ms)#
+Search the picture '' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 430ms)#
 Then ::
-The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(715ms)#
+The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 084ms)#
 ==========
 
 ==== Scenario: Test with search request
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(762ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(766ms)#
 When ::
-Search the picture 'dog' icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 431ms)#
+Search the picture 'dog' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 608ms)#
 Then ::
-The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 665ms)#
+The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 679ms)#
 ==========
 
