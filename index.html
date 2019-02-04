@@ -71,7 +71,7 @@
                                 </li>
                             </ul>
                             <li>
-                                <a href="#line3">Sentiment Analysis</a>
+                                <a href="#line3">Search Pic</a>
                             </li>
                             <ul class="nav">
                                 <li>
@@ -250,12 +250,6 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="https://draw.io/" target="_blank">Draw</a>
-                                    <ul>
-                                        <li>Draw diagrams online</li>
-                                    </ul>
-                                </li>
-                                <li>
                                     <a href="https://www.flickr.com/services/api/" target="_blank">Flickr-Api</a>
                                     <ul>
                                         <li>Search for pictures</li>
@@ -275,35 +269,18 @@
                     </div>                     
                     <!-- end row -->                     
                     <div class="row">
-                        <div class="col-md-12 left-align">
-                            <h2 id="line3_4">CI/CD Pipeline <a href="#top" class="toplink">#back to top</a></h2>
-                            The following pipelines got implemented in Travis CI (all of them will start after each push to the master branch):
-                            <br>
-                            <b>application pipeline:</b>
-                            <br>
-                            <img src="diagrams/application.png" style="margin-top: 0px;">
-                            <br>
-                            <br>
-                            <b>transformator pipeline:</b>
-                            <br>
-                            <img src="diagrams/transformator.png" style="margin-top: 0px;">
-                            <br>
-                            <br>
-                            <b>uml pipeline:</b>
-                            <br>
-                            <img src="diagrams/uml.png" style="margin-top: 0px;">
-                        </div>
-                    </div>                     
+</div>                     
                     <!-- end row -->                     
                     <div class="row">
                         <div class="col-md-12 left-align">
                             <h2 id="line3_5">UML diagrams <a href="#top" class="toplink">#back to top</a></h2>
                             The class diagram used for generating the backend:
-                            <img src="https://raw.githubusercontent.com/fhv-msi/sentiment-analysis-uml/master/images/Class_Diagram.PNG" style="margin-top: 0px; width: 100%">
+                            <img src="diagrams/umlSearchPic.PNG" style="margin-top: 0px; width: 100%">
                             <ul style="list-style: square; padding-left: 30px">
-                                <li>AnalysisEndpoint
+                                <li>
                                     <ul>
-                                        <li>Contains operations for analyzing a text and return the sentiment for it</li>
+                                        <li>PictureEndpoint</li>
+                                        <li>Contains operations for using an input-text and return the image for it</li>
                                     </ul>
                                 </li>
                                 <li>HistoryEndpoint
@@ -316,9 +293,9 @@
                                         <li>Contains operations for user login and logout</li>
                                     </ul>
                                 </li>
-                                <li>AnalysisHandler
+                                <li>PictureHandler
                                     <ul>
-                                        <li>Business logic for executing the sentiment analysis with a webservice call to indico.io</li>
+                                        <li>Business logic for executing the search picture function with a webservice call to the flickr-api</li>
                                     </ul>
                                 </li>
                                 <li>HistoryHandler
@@ -343,59 +320,54 @@
                                 </li>
                                 <li>HistoryItem
                                     <ul>
-                                        <li>Single history item which contains a single analysis with the text and the result</li>
+                                        <li>Single history item which contains a single item (picture) with the searched input</li>
                                     </ul>
                                 </li>
-                                <li>SentimentResult
+                                <li>Picture Result
                                     <ul>
-                                        <li>Represents a single result of a sentiment analysis of a given text</li>
+                                        <li>Represents a single result of a requested picture of a given input</li>
                                     </ul>
                                 </li>
                             </ul>
-                            <br>
-                            The following stereotypes are used to specify the correct generator for the class:
-                            <img src="https://raw.githubusercontent.com/fhv-msi/sentiment-analysis-uml/master/images/Profile_Diagram.PNG" style="margin-top: 0px; width: 100%">
-                            The stereotypes are used to use different generators for different classes in the UML diagram.
-                            <br>
-                            Description of the stereotypes:
-                            <br>
-                            <ul style="list-style: square; padding-left: 30px">
-                                <li>Endpoint (class)
-                                    <ul>
-                                        <li>This will generate a REST endpoint in Springboot</li>
-                                    </ul>
-                                </li>
-                                <li>Handler (class)
-                                    <ul>
-                                        <li>This will generate a simple class which holds the business logic of the application</li>
-                                    </ul>
-                                </li>
-                                <li>Model (class)
-                                    <ul>
-                                        <li>This will generate a JavaBean</li>
-                                    </ul>
-                                </li>
-                                <li>Read (operation)
-                                    <ul>
-                                        <li>This will generate a GET endpoint with the given path as URL</li>
-                                    </ul>
-                                </li>
-                                <li>Write (operation)
-                                    <ul>
-                                        <li>This will generate a POST endpoint with the given path as URL</li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <!--<br>-->
+                            <!--The following stereotypes are used to specify the correct generator for the class:-->
+                            <!--&lt;!&ndash;<img src="https://raw.githubusercontent.com/fhv-msi/sentiment-analysis-uml/master/images/Profile_Diagram.PNG" style="margin-top: 0px; width: 100%">&ndash;&gt;-->
+                            <!--The stereotypes are used to use different generators for different classes in the UML diagram.-->
+                            <!--<br>-->
+                            <!--Description of the stereotypes:-->
+                            <!--<br>-->
+                            <!--<ul style="list-style: square; padding-left: 30px">-->
+                                <!--<li>Endpoint (class)-->
+                                    <!--<ul>-->
+                                        <!--<li>This will generate a REST endpoint in Springboot</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                                <!--<li>Handler (class)-->
+                                    <!--<ul>-->
+                                        <!--<li>This will generate a simple class which holds the business logic of the application</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                                <!--<li>Model (class)-->
+                                    <!--<ul>-->
+                                        <!--<li>This will generate a JavaBean</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                                <!--<li>Read (operation)-->
+                                    <!--<ul>-->
+                                        <!--<li>This will generate a GET endpoint with the given path as URL</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                                <!--<li>Write (operation)-->
+                                    <!--<ul>-->
+                                        <!--<li>This will generate a POST endpoint with the given path as URL</li>-->
+                                    <!--</ul>-->
+                                <!--</li>-->
+                            <!--</ul>-->
                         </div>
                     </div>                     
                     <!-- end row -->                     
                     <div class="row">
-                        <div class="col-md-12 left-align">
-                            <h2 id="line3_6">JavaDoc <a href="#top" class="toplink">#back to top</a></h2>
-                            The following report is generated with the Maven JavaDoc Plugin:
-                            <iframe src="generated/apidocs/index.html" style="width: 100%; height: 500px;"></iframe>
-                        </div>
-                    </div>                     
+</div>                     
                     <!-- end row -->                     
                     <!--
                         <div class="row">
