@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">application</a> &gt; <a href="index.source.html" class="el_package">at.fhv.cicd.application.handlers</a> &gt; <span class="el_source">AuthHandler.java</span></div><h1>AuthHandler.java</h1><pre class="source lang-java linenums">package at.fhv.cicd.application.handlers;
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">searchPicSpring</a> &gt; <a href="index.source.html" class="el_package">at.fhv.cicd.application.handlers</a> &gt; <span class="el_source">AuthHandler.java</span></div><h1>AuthHandler.java</h1><pre class="source lang-java linenums">package at.fhv.cicd.application.handlers;
 
 // Start of user code (user defined imports)
 import org.apache.commons.codec.digest.DigestUtils;
@@ -26,32 +26,32 @@ public class AuthHandler {
 <span class="fc" id="L26">	    return INSTANCE;</span>
 	}
 	
-	public String login(String email) throws Exception {
-		// Start of user code login
-<span class="fc bfc" id="L31" title="All 4 branches covered.">		if (email == null || &quot;&quot;.equals(email)) {</span>
-<span class="fc" id="L32">			throw new Exception(&quot;Email must not be empty&quot;);</span>
-		}
-
-<span class="fc" id="L35">		String token = DigestUtils.md2Hex(email);</span>
-<span class="pc bpc" id="L36" title="1 of 2 branches missed.">		if (!users.containsKey(token)) {</span>
-<span class="fc" id="L37">			at.fhv.cicd.application.models.User user = new at.fhv.cicd.application.models.User();</span>
-<span class="fc" id="L38">			user.setEmail(email);</span>
-<span class="fc" id="L39">			user.setHistory(new at.fhv.cicd.application.models.History());</span>
-<span class="fc" id="L40">			users.put(token, user);</span>
-		}
-
-<span class="fc" id="L43">		return token;</span>
-		// End of user code
-	}
-	
 	public void logout(String token) throws Exception {
 		// Start of user code logout
-<span class="fc bfc" id="L49" title="All 4 branches covered.">		if (token == null || &quot;&quot;.equals(token)) {</span>
-<span class="fc" id="L50">			throw new Exception(&quot;Unknown token&quot;);</span>
+<span class="fc bfc" id="L31" title="All 4 branches covered.">		if (token == null || &quot;&quot;.equals(token)) {</span>
+<span class="fc" id="L32">			throw new Exception(&quot;Unknown token&quot;);</span>
 		}
-<span class="fc" id="L52">		users.remove(token);</span>
+<span class="fc" id="L34">		users.remove(token);</span>
 		// End of user code
-<span class="fc" id="L54">	}</span>
+<span class="fc" id="L36">	}</span>
+	
+	public String login(String email) throws Exception {
+		// Start of user code login
+<span class="fc bfc" id="L40" title="All 4 branches covered.">		if (email == null || &quot;&quot;.equals(email)) {</span>
+<span class="fc" id="L41">			throw new Exception(&quot;Email must not be empty&quot;);</span>
+		}
+
+<span class="fc" id="L44">		String token = DigestUtils.md2Hex(email);</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">		if (!users.containsKey(token)) {</span>
+<span class="fc" id="L46">			at.fhv.cicd.application.models.User user = new at.fhv.cicd.application.models.User();</span>
+<span class="fc" id="L47">			user.setEmail(email);</span>
+<span class="fc" id="L48">			user.setHistory(new at.fhv.cicd.application.models.History());</span>
+<span class="fc" id="L49">			users.put(token, user);</span>
+		}
+
+<span class="fc" id="L52">		return token;</span>
+		// End of user code
+	}
 	
 	// Start of user code (user defined operations)
 	public at.fhv.cicd.application.models.User getUser(String token) throws Exception {

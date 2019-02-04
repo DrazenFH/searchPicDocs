@@ -34,104 +34,64 @@
 |Duration
 |Status
 
-12+^|*<<Automated-User-Acceptance-Tests-for-the-Sentiment-Analysis-Application>>*
-|5
+12+^|*<<Automated-User-Acceptance-Tests-for-the-Search-Pic-Application>>*
+|3
 |0
-|5
-|27
-|0
-|0
+|3
+|10
 |0
 |0
 |0
-|27
-|33s 459ms
+|0
+|0
+|10
+|19s 371ms
 |[green]#*passed*#
 12+^|*Totals*
-|5|0|5|27|0|0|0|0|0|27 2+|33s 459ms
+|3|0|3|10|0|0|0|0|0|10 2+|19s 371ms
 |===
 
 == *Features*
 
-[[Automated-User-Acceptance-Tests-for-the-Sentiment-Analysis-Application, Automated User Acceptance Tests for the Sentiment Analysis Application]]
-=== *Automated User Acceptance Tests for the Sentiment Analysis Application*
+[[Automated-User-Acceptance-Tests-for-the-Search-Pic-Application, Automated User Acceptance Tests for the Search Pic Application]]
+=== *Automated User Acceptance Tests for the Search Pic Application*
 
 ifndef::backend-pdf[]
-minmax::Automated-User-Acceptance-Tests-for-the-Sentiment-Analysis-Application[]
+minmax::Automated-User-Acceptance-Tests-for-the-Search-Pic-Application[]
 endif::[]
 ==== Background
 
 ==========
 Given ::
-Open https://fhv-application-staging.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 478ms)#
+Open https://searchpic.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 938ms)#
 ==========
 
-==== Scenario: Test login and logout
-
-==========
-Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 219ms)#
-When ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 794ms)#
-Then ::
-I see the login page icon:thumbs-up[role="green",title="Passed"] [small right]#(156ms)#
-==========
-
-==== Scenario: Test positive sentiment
+==== Scenario: Test login
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 411ms)#
-When ::
-Analyze the text 'I love people' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 316ms)#
-Then ::
-The smiley should be happy icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 559ms)#
-And ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 703ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(769ms)#
 ==========
 
-==== Scenario: Test negative sentiment
+==== Scenario: Test no search request
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 089ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(743ms)#
 When ::
-Analyze the text 'I hate people' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 329ms)#
+Search the picture '' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 712ms)#
 Then ::
-The smiley should be unhappy icon:thumbs-up[role="green",title="Passed"] [small right]#(771ms)#
-And ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 755ms)#
+The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(715ms)#
 ==========
 
-==== Scenario: Test neutral sentiment
+==== Scenario: Test with search request
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 045ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(762ms)#
 When ::
-Analyze the text '' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 265ms)#
+Search the picture 'dog' icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 431ms)#
 Then ::
-The smiley should be neutral icon:thumbs-up[role="green",title="Passed"] [small right]#(727ms)#
-And ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 599ms)#
-==========
-
-==== Scenario: User interaction with history (video)
-
-==========
-Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 214ms)#
-When ::
-Analyze the text 'I love people' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 323ms)#
-And ::
-Analyze the text 'I hate people' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 362ms)#
-And ::
-Navigate to history icon:thumbs-up[role="green",title="Passed"] [small right]#(718ms)#
-Then ::
-The 1. row shows the history item with text 'I love people' and sentiment is 'happy' icon:thumbs-up[role="green",title="Passed"] [small right]#(589ms)#
-And ::
-The 2. row shows the history item with text 'I hate people' and sentiment is 'unhappy' icon:thumbs-up[role="green",title="Passed"] [small right]#(557ms)#
-And ::
-I press logout icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 736ms)#
+The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 665ms)#
 ==========
 
