@@ -1,0 +1,97 @@
+:toc: right
+:backend: html5
+:doctitle: Living Documentation
+:doctype: book
+:icons: font
+:!numbered:
+:!linkcss:
+:sectanchors:
+:sectlink:
+:docinfo:
+:source-highlighter: highlightjs
+:toclevels: 3
+:hardbreaks:
+:chapter-label: Chapter
+:version-label: Version
+
+= *Living Documentation*
+
+== *Summary*
+[cols="12*^m", options="header,footer"]
+|===
+3+|Scenarios 7+|Steps 2+|Features: 1
+
+|[green]#*Passed*#
+|[red]#*Failed*#
+|Total
+|[green]#*Passed*#
+|[red]#*Failed*#
+|[purple]#*Skipped*#
+|[maroon]#*Pending*#
+|[yellow]#*Undefined*#
+|[blue]#*Missing*#
+|Total
+|Duration
+|Status
+
+12+^|*<<Automated-User-Acceptance-Tests-for-the-Search-Pic-Application>>*
+|3
+|0
+|3
+|10
+|0
+|0
+|0
+|0
+|0
+|10
+|19s 371ms
+|[green]#*passed*#
+12+^|*Totals*
+|3|0|3|10|0|0|0|0|0|10 2+|19s 371ms
+|===
+
+== *Features*
+
+[[Automated-User-Acceptance-Tests-for-the-Search-Pic-Application, Automated User Acceptance Tests for the Search Pic Application]]
+=== *Automated User Acceptance Tests for the Search Pic Application*
+
+ifndef::backend-pdf[]
+minmax::Automated-User-Acceptance-Tests-for-the-Search-Pic-Application[]
+endif::[]
+==== Background
+
+==========
+Given ::
+Open https://searchpic.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 938ms)#
+==========
+
+==== Scenario: Test login
+
+==========
+Given ::
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(769ms)#
+==========
+
+==== Scenario: Test no search request
+
+==========
+Given ::
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(743ms)#
+When ::
+Search the picture '' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 712ms)#
+Then ::
+The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(715ms)#
+==========
+
+==== Scenario: Test with search request
+
+==========
+Given ::
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(762ms)#
+When ::
+Search the picture 'dog' icon:thumbs-up[role="green",title="Passed"] [small right]#(02s 431ms)#
+Then ::
+The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 665ms)#
+==========
+
