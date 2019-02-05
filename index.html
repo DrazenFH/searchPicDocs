@@ -12,8 +12,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <meta name="keywords" content="">
-        <title>Sentiment Anaylsis | Documentation by Michael Sieber</title>
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        <title>Search Pic | Documentation by Benjamin Grabherr & Drazen Lukic</title>
         <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="css/stroke.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -37,8 +36,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="big-title text-center">
-                                <img src="images/fhv.png" width="25%" /> 
+                                <img src="images/fhv.png" width="25%" />
                                 <h1>Search Pic Documentation</h1>
+                                <h3>Based on the sentiment analysis project from Michael Sieber</h3>
                                 <p class="lead"></p>
                             </div>
                             <!-- end title -->
@@ -53,23 +53,23 @@
                     <div class="col-md-3">
                         <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
                             <ul class="nav">
-                                <li>
-                                    <a href="#line1">Getting Started</a>
-                                </li>
-                                <li>
-                                    <a href="#line2">How to setup a project</a>
-                                </li>
-                                <ul class="nav"></li>
-                                <li>
-                                    <a href="#line2_1">Papyrus UML project</a>
-                                </li>
-                                <li>
-                                    <a href="#line2_2">Maven configuration</a>
-                                </li>
-                                <li>
-                                    <a href="#line2_3">Application template</a>
-                                </li>
-                            </ul>
+                                <!--<li>-->
+                                    <!--<a href="#line1">Getting Started</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="#line2">How to setup a project</a>-->
+                                <!--</li>-->
+                                <!--<ul class="nav"></li>-->
+                                <!--<li>-->
+                                    <!--<a href="#line2_1">Papyrus UML project</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="#line2_2">Maven configuration</a>-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<a href="#line2_3">Application template</a>-->
+                                <!--</li>-->
+                            <!--</ul>-->
                             <li>
                                 <a href="#line3">Search Pic</a>
                             </li>
@@ -89,9 +89,9 @@
                                 <li>
                                     <a href="#line3_5">UML diagrams</a>
                                 </li>
-                                <li>
-                                    <a href="#line3_6">JavaDoc</a>
-                                </li>
+                                <!--<li>-->
+                                    <!--<a href="#line3_6">JavaDoc</a>-->
+                                <!--</li>-->
                                 <!-- <li><a href="#line3_7">API documentation</a></li> -->
                                 <li>
                                     <a href="#line3_8">Unit test report</a>
@@ -122,6 +122,7 @@
                                 <div class="col-md-12 full">
                                     <div>
                                         <p>This documentation is part of the search pic example project for the course "Software quality and lifecycle" at the University of Applied Sciences Vorarlberg</p>
+                                        <p>This project was implemented with the help of the sentiment analysis project</p>
                                     </div>
                                 </div>
                             </div>
@@ -244,12 +245,6 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="https://indico.io/" target="_blank">Indico</a>
-                                    <ul>
-                                        <li>Webservice for sentiment analysis</li>
-                                    </ul>
-                                </li>
-                                <li>
                                     <a href="https://www.flickr.com/services/api/" target="_blank">Flickr-Api</a>
                                     <ul>
                                         <li>Search for pictures</li>
@@ -269,6 +264,14 @@
                     </div>                     
                     <!-- end row -->                     
                     <div class="row">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 id="line3_4">Walk CI/CD-Pipeline <a href="#top" class="toplink">#back to top</a></h2>
+                                <img src="diagrams/application_pipeline.png" style="margin-top: 0px; width: 100%">
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <div class="row">
 </div>                     
                     <!-- end row -->                     
                     <div class="row">
@@ -329,40 +332,40 @@
                                     </ul>
                                 </li>
                             </ul>
-                            <!--<br>-->
-                            <!--The following stereotypes are used to specify the correct generator for the class:-->
-                            <!--&lt;!&ndash;<img src="https://raw.githubusercontent.com/fhv-msi/sentiment-analysis-uml/master/images/Profile_Diagram.PNG" style="margin-top: 0px; width: 100%">&ndash;&gt;-->
-                            <!--The stereotypes are used to use different generators for different classes in the UML diagram.-->
-                            <!--<br>-->
-                            <!--Description of the stereotypes:-->
-                            <!--<br>-->
-                            <!--<ul style="list-style: square; padding-left: 30px">-->
-                                <!--<li>Endpoint (class)-->
-                                    <!--<ul>-->
-                                        <!--<li>This will generate a REST endpoint in Springboot</li>-->
-                                    <!--</ul>-->
-                                <!--</li>-->
-                                <!--<li>Handler (class)-->
-                                    <!--<ul>-->
-                                        <!--<li>This will generate a simple class which holds the business logic of the application</li>-->
-                                    <!--</ul>-->
-                                <!--</li>-->
-                                <!--<li>Model (class)-->
-                                    <!--<ul>-->
-                                        <!--<li>This will generate a JavaBean</li>-->
-                                    <!--</ul>-->
-                                <!--</li>-->
-                                <!--<li>Read (operation)-->
-                                    <!--<ul>-->
-                                        <!--<li>This will generate a GET endpoint with the given path as URL</li>-->
-                                    <!--</ul>-->
-                                <!--</li>-->
-                                <!--<li>Write (operation)-->
-                                    <!--<ul>-->
-                                        <!--<li>This will generate a POST endpoint with the given path as URL</li>-->
-                                    <!--</ul>-->
-                                <!--</li>-->
-                            <!--</ul>-->
+                            <br>
+                            The following stereotypes are used to specify the correct generator for the class:
+                            <img src="diagrams/Stereotype.PNG" style="margin-top: 0px; width: 100%">
+                            The stereotypes are used to use different generators for different classes in the UML diagram.
+                            <br>
+                            Description of the stereotypes:
+                            <br>
+                            <ul style="list-style: square; padding-left: 30px">
+                            <li>Endpoint (class)
+                            <ul>
+                            <li>This will generate a REST endpoint in Springboot</li>
+                            </ul>
+                            </li>
+                            <li>Handler (class)
+                            <ul>
+                            <li>This will generate a simple class which holds the business logic of the application</li>
+                            </ul>
+                            </li>
+                            <li>Model (class)
+                            <ul>
+                            <li>This will generate a JavaBean</li>
+                            </ul>
+                            </li>
+                            <li>Read (operation)
+                            <ul>
+                            <li>This will generate a GET endpoint with the given path as URL</li>
+                            </ul>
+                            </li>
+                            <li>Write (operation)
+                            <ul>
+                            <li>This will generate a POST endpoint with the given path as URL</li>
+                            </ul>
+                            </li>
+                            </ul>
                         </div>
                     </div>                     
                     <!-- end row -->                     
@@ -411,25 +414,9 @@
                     <!-- end row -->                     
                     <div class="row">
                         <div class="col-md-12 left-align">
-                            <h2 id="line3_12">Static code analysis report <a href="#top" class="toplink">#back to top</a></h2>
-                            The detailed report can be found 
-                            <a href="https://sonarcloud.io/dashboard?id=at.fhv.cicd%3Aapplication" target="_blank">here</a>
-                            <br>
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=alert_status">
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=bugs">
-                            <br>
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=code_smells">
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=coverage">
-                            <br>
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=duplicated_lines_density">
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=ncloc">
-                            <br>
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=sqale_rating">
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=reliability_rating">
-                            <br>
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=security_rating">
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=sqale_index">
-                            <img src="https://sonarcloud.io/api/project_badges/measure?project=at.fhv.cicd%3Aapplication&amp;metric=vulnerabilities">
+                            <h2 id="line3_12">SonarQube Record<a href="#top" class="toplink">#back to top</a></h2>
+                            The detailed report can be found under following link:
+                            <a href="https://sonarcloud.io/dashboard?id=at.fhv%3AsearchPicSpring" target="_blank">here</a>
                         </div>
                     </div>                     
                     <!-- end row -->
