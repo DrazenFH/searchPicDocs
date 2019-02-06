@@ -45,10 +45,10 @@
 |0
 |0
 |10
-|16s 940ms
+|17s 465ms
 |[green]#*passed*#
 12+^|*Totals*
-|3|0|3|10|0|0|0|0|0|10 2+|16s 940ms
+|3|0|3|10|0|0|0|0|0|10 2+|17s 465ms
 |===
 
 == *Features*
@@ -63,35 +63,35 @@ endif::[]
 
 ==========
 Given ::
-Open https://searchpic.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 274ms)#
+Open https://searchpic.herokuapp.com/ icon:thumbs-up[role="green",title="Passed"] [small right]#(03s 394ms)#
 ==========
 
 ==== Scenario: Test login
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(813ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(768ms)#
 ==========
 
 ==== Scenario: Test no search request
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(747ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(789ms)#
 When ::
-Search the picture '' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 373ms)#
+Search the picture '' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 403ms)#
 Then ::
-The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(717ms)#
+The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(706ms)#
 ==========
 
 ==== Scenario: Test with search request
 
 ==========
 Given ::
-Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(784ms)#
+Login with user 'user@test.com' icon:thumbs-up[role="green",title="Passed"] [small right]#(829ms)#
 When ::
-Search the picture 'dog' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 463ms)#
+Search the picture 'dog' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 763ms)#
 Then ::
-The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 670ms)#
+The result list should be 'jpg' icon:thumbs-up[role="green",title="Passed"] [small right]#(01s 695ms)#
 ==========
 
