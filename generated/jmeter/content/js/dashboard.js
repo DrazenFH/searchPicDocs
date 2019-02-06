@@ -167,7 +167,7 @@ $(document).ready(function() {
     });
 
     // Creates APDEX table
-    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.99475, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [1.0, 500, 1500, "Logout"], "isController": false}, {"data": [0.9895, 500, 1500, "Login"], "isController": false}]}, function(index, item){
+    createTable($("#apdexTable"), {"supportsControllersDiscrimination": true, "overall": {"data": [0.988, 500, 1500, "Total"], "isController": false}, "titles": ["Apdex", "T (Toleration threshold)", "F (Frustration threshold)", "Label"], "items": [{"data": [0.999, 500, 1500, "Logout"], "isController": false}, {"data": [0.977, 500, 1500, "Login"], "isController": false}]}, function(index, item){
         switch(index){
             case 0:
                 item = item.toFixed(3);
@@ -181,7 +181,7 @@ $(document).ready(function() {
     }, [[0, 0]], 3);
 
     // Create statistics table
-    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 2000, 0, 0.0, 398.0824999999999, 107, 25364, 443.0, 449.0, 473.98, 24.805278563278264, 4.009056252170462, 6.322439165054323], "isController": false}, "titles": ["Label", "#Samples", "KO", "Error %", "Average", "Min", "Max", "90th pct", "95th pct", "99th pct", "Throughput", "Received", "Sent"], "items": [{"data": ["Logout", 1000, 0, 0.0, 116.38899999999991, 107, 395, 119.0, 125.0, 320.4900000000014, 17.84312326029548, 2.2478153325958177, 4.7047297658982234], "isController": false}, {"data": ["Login", 1000, 0, 0.0, 679.776000000001, 423, 25364, 449.0, 457.0, 23102.940000000206, 12.42004595417003, 2.4500481276780723, 3.0564956840340307], "isController": false}]}, function(index, item){
+    createTable($("#statisticsTable"), {"supportsControllersDiscrimination": true, "overall": {"data": ["Total", 2000, 0, 0.0, 288.67250000000047, 107, 2114, 452.0, 466.0, 779.9000000000001, 33.53903944191038, 5.420616237925946, 8.548524701502549], "isController": false}, "titles": ["Label", "#Samples", "KO", "Error %", "Average", "Min", "Max", "90th pct", "95th pct", "99th pct", "Throughput", "Received", "Sent"], "items": [{"data": ["Logout", 1000, 0, 0.0, 118.98100000000004, 107, 750, 126.0, 134.94999999999993, 178.98000000000002, 17.18272105570638, 2.164620132994261, 4.530600278360081], "isController": false}, {"data": ["Login", 1000, 0, 0.0, 458.3640000000001, 422, 2114, 465.0, 495.94999999999993, 996.4300000000005, 16.80079299742948, 3.3142189311335493, 4.134570151711161], "isController": false}]}, function(index, item){
         switch(index){
             // Errors pct
             case 3:
